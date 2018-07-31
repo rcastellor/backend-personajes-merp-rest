@@ -1,4 +1,4 @@
-package es.castellor.merp.backend;
+package es.castellor.merp.personajes.modelo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
