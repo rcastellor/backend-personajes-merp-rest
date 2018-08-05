@@ -9,6 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="profesiones")
+
 public class Profesion implements Serializable {
 	
 	/**
