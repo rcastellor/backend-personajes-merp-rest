@@ -2,12 +2,22 @@ package es.castellor.merp.personajes.modelo;
 
 import java.io.Serializable;
 
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="caracteristicas")
 public class Caracteristica implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -447893342907132672L;
-	private Integer id;
+	
+	@EmbeddedId
+	private CaracteristicaID id;
+	
 	private String caracteristica;
 	private String abr;
 	private String valor;
@@ -15,12 +25,13 @@ public class Caracteristica implements Serializable {
 	private String raza;
 	private String total;
 	
-	public Integer getId() {
+	public CaracteristicaID getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(CaracteristicaID id) {
 		this.id = id;
 	}
+
 	public String getCaracteristica() {
 		return caracteristica;
 	}

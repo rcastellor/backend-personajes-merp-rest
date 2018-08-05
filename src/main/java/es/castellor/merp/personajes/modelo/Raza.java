@@ -2,11 +2,20 @@ package es.castellor.merp.personajes.modelo;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="razas")
 public class Raza implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 4739174579825256806L;
+	
+	@Id
 	private Integer id;
 	private String descripcion;
 	
