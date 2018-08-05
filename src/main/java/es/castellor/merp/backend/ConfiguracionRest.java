@@ -1,8 +1,11 @@
-package es.castellor.merp.personajes.modelo;
+package es.castellor.merp.backend;
 
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 import org.springframework.stereotype.Component;
+
+import es.castellor.merp.personajes.modelo.Profesion;
+import es.castellor.merp.personajes.modelo.Raza;
 
 @Component
 public class ConfiguracionRest extends RepositoryRestConfigurerAdapter {
