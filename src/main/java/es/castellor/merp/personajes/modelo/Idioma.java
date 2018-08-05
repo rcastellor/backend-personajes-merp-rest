@@ -2,6 +2,9 @@ package es.castellor.merp.personajes.modelo;
 
 import java.io.Serializable;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Idioma implements Serializable{
 	
 	/**

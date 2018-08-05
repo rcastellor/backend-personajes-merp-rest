@@ -2,17 +2,12 @@ package es.castellor.merp.personajes.modelo;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
 
-@Entity
-@Table(name="datos")
+@Embeddable
 public class DatosPersonaje implements Serializable{
 	
 	/**
@@ -20,9 +15,6 @@ public class DatosPersonaje implements Serializable{
 	 */
 	private static final long serialVersionUID = -4910365881527885214L;
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
 	
 	private String nombre;
 	
@@ -43,14 +35,6 @@ public class DatosPersonaje implements Serializable{
 	private Profesion profesion;
 	
 	private Integer nivel;
-	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	
 	public String getNombre() {
 		return nombre;
@@ -112,7 +96,4 @@ public class DatosPersonaje implements Serializable{
 	public void setNivel(Integer nivel) {
 		this.nivel = nivel;
 	}
-	
-	
-
 }
